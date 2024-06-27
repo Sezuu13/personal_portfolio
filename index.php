@@ -10,7 +10,7 @@ require_once "admin/db.php";
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Seth Andrei Dimaano</title>
+        <title>Seth Andrei Dimaano Website</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -118,13 +118,13 @@ require_once "admin/db.php";
             <div class="col-lg-12 text-center">
                 <div class="section-title mb-25">
                     <span>Introduction</span>
-                    <h2>About Me</h2>
+                    <h2>About Myself</h2>
                 </div>
                 <div class="about-content">
                     <p><?=$about_me['details']?></p>
                 </div>
                 <div class="section-title mb-25">
-                    <h3>Education:</h3>
+                    <h3>Education and School:</h3>
                 </div>
 
                 <?php 
@@ -152,15 +152,9 @@ require_once "admin/db.php";
     </div>
 </section>
 
-
-            <!-- contact-area -->
             <section id="contact" class="contact-area primary-bg pt-120 pb-120">
                 <div class="container">
                     <div class="row align-items-center">
-
-                       
-               <!-- contact information query in side view part -->
-                        
 
                         <div class="col-lg-6">
                             <div class="section-title mb-20">
@@ -169,7 +163,7 @@ require_once "admin/db.php";
                             </div>
                             <div class="contact-content">
                                 <p><?=$contact_information['small_text']?></p>
-                                <h5>OFFICE IN : <span><?=$contact_information['office']?></span></h5>
+                                <h5>Place: <span><?=$contact_information['office']?></span></h5>
                                 <div class="contact-list">
                                     <ul>
                                         <li><i class="fas fa-map-marker"></i><span>Address :</span><?=$contact_information['address']?></li>

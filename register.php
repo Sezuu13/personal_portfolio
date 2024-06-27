@@ -50,7 +50,7 @@ require_once "user_valid.php";
 
                             <form class="form-horizontal" action="<?=$_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 
-                              <!-- email already exist alert -->
+                              
                               <?php if(isset($email_exist)){ ?>                              
                                 <div class="alert alert-danger">
                                     <?= $email_exist ?>
@@ -58,8 +58,6 @@ require_once "user_valid.php";
                               <?php } ?>
 
                               
-
-                                <!-- full name -->
 
                                 <div class="form-group row m-b-20">
                                     <div class="col-12">
@@ -71,7 +69,6 @@ require_once "user_valid.php";
                                         ?>">
                                         
                                         
-                                        <!-- name error -->
                                         <label style="color:red; font-style:italic;">
                                             <?php
                                             if (isset($input_error['name'])) {
@@ -93,7 +90,7 @@ require_once "user_valid.php";
                                         }
                                         ?>">
 
-                      <!-- =================== email error ====== -->
+                      
                                         <label style="color:red;font-style: italic;" for="emailaddress">
                                           <?php
                                             if(isset($input_error['email'])){
@@ -105,7 +102,7 @@ require_once "user_valid.php";
                                     </div>
                                 </div>
 
-                                <!-- password -->
+                               
 
                                 <div class="form-group row m-b-20">
                                     <div class="col-12">
@@ -116,7 +113,6 @@ require_once "user_valid.php";
                                         }
                                         ?>">
 
-                                  <!-- ================ password error ========== -->
                                         <label for="password" style="color:red;font-style:italic;">
                                           <?php 
                                             if(isset($input_error['password'])){
@@ -128,7 +124,7 @@ require_once "user_valid.php";
                                     </div>
                                 </div>
 
-                                <!-- confirm password -->
+                                
                                  <div class="form-group row m-b-20">
                                     <div class="col-12">
                                         <label for="cpassword">Confirm Password</label>
@@ -138,7 +134,6 @@ require_once "user_valid.php";
                                           }
                                          ?>">
 
-                                        <!-- confirm password error -->
                                         <label style="color:red;font-style:italic;" for="cpassword">
                                           <?php if(isset($input_error['cpassword'])){
                                             echo $input_error['cpassword'];
@@ -154,7 +149,7 @@ require_once "user_valid.php";
                                         
                                         <input class="form-control" type="file"  placeholder="attached photo" name="photo" >
 
-                                        <!-- photo error -->
+                                       
                                         <label style="color:red;font-style:italic;" >
                                           <?php if(isset($photo_error)){
                                             echo $photo_error;
@@ -165,7 +160,6 @@ require_once "user_valid.php";
                                 </div>
 
 
-                                <!-- submit  -->
 
                                 <div class="form-group row m-b-20">
                                     <div class="col-12">
@@ -201,20 +195,15 @@ require_once "user_valid.php";
 
         </div>
 
-
-
-        <!-- jQuery  -->
         <script src="admin/assets/js/jquery.min.js"></script>
         <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
         <script src="admin/assets/js/metisMenu.min.js"></script>
         <script src="admin/assets/js/waves.js"></script>
         <script src="admin/assets/js/jquery.slimscroll.js"></script>
 
-        <!-- App js -->
         <script src="admin/admin/assets/js/jquery.core.js"></script>
         <script src="admin/admin/assets/js/jquery.app.js"></script>
 
     </body>
 
-<!-- Mirrored from coderthemes.com/highdmin/vertical/page-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2019 06:52:57 GMT -->
 </html>

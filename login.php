@@ -44,7 +44,6 @@ require_once "login_val.php";
 
                             <form class="" action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
-                                <!-- user add success message -->
                               <?php if(isset($_SESSION['user_success'])){ ?>                              
                                 <div class="alert alert-success">
                                     <?= $_SESSION['user_success'] ?>
@@ -53,8 +52,6 @@ require_once "login_val.php";
                               unset($_SESSION['user_success']);
                               ?>
 
-                              
-                              <!-- email not match     -->
 
                               <?php if(isset($email_not_matched)) { ?>
                                 <div class="alert alert-danger">
@@ -62,7 +59,6 @@ require_once "login_val.php";
                                 </div>
                               <?php } ?>
 
-                            <!-- password not match -->
 
                               <?php if(isset($password_not_matched)) { ?>
                                 <div class="alert alert-danger">
@@ -70,18 +66,15 @@ require_once "login_val.php";
                                 </div>
                               <?php } ?>
 
-                              <!-- waiting for admin approval -->
                               <?php if(isset($waiting)) { ?>
                                 <div class="alert alert-success">
                                   <?=$waiting?>
                                 </div>
                               <?php } ?>
 
-
-
                                 <div class="form-group m-b-20 row">
                                     <div class="col-12">
-                                        <label for="emailaddress">Email address</label>
+                                        <label for="emailaddress">Type your email address </label>
                                         <input class="form-control" type="text" id="emailaddress"  placeholder="Enter your email"  name="email" value="<?php if(isset($email)){
                                           echo $email;
                                         } ?>">
@@ -91,7 +84,7 @@ require_once "login_val.php";
 
                                 <div class="form-group row m-b-20">
                                     <div class="col-12">
-                                        <label for="password">Password</label>
+                                        <label for="password">Type your password </label>
                                         <input class="form-control" type="password"  id="password" placeholder="Enter your password" name="password" value="<?php if(isset($password)){
                                           echo $password;
                                         } ?>">
@@ -104,7 +97,7 @@ require_once "login_val.php";
                                         <div class="checkbox checkbox-custom">
                                             <input id="remember" type="checkbox" checked="">
                                             <label for="remember">
-                                                Remember me
+                                                Login always
                                             </label>
                                         </div>
 
@@ -121,7 +114,7 @@ require_once "login_val.php";
 
                             <div class="row m-t-50">
                                 <div class="col-sm-12 text-center">
-                                    <p class="text-muted">Don't have an account? <a href="register.php" class="text-dark m-l-5"><b>Sign Up</b></a></p>
+                                    <p class="text-muted">New user? <a href="register.php" class="text-dark m-l-5"><b>Sign Up</b></a></p>
                                 </div>
                             </div>
 
@@ -131,16 +124,12 @@ require_once "login_val.php";
                 </div>
         </div>
 
-
-
-        <!-- jQuery  -->
         <script src="admin/assets/js/jquery.min.js"></script>
         <script src="admin/assets/js/bootstrap.bundle.min.js"></script>
         <script src="admin/assets/js/metisMenu.min.js"></script>
         <script src="admin/assets/js/waves.js"></script>
         <script src="admin/assets/js/jquery.slimscroll.js"></script>
 
-        <!-- App js -->
         <script src="admin/assets/js/jquery.core.js"></script>
         <script src="admin/assets/js/jquery.app.js"></script>
 
